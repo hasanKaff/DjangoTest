@@ -1,7 +1,10 @@
 <html>
   <body>
-    <h1>  Welcome In Notes App </h1>
     <h1>  All the available Notes </h1>
+
+    <a href="{% url 'notes:add_note' %}">Add New Note</a>
+    <br>
+    <hr>
       {% for note in all_notes %}
       <a href="{% url 'notes:note_detail' note.slug %}">{{note}}</a>
 
