@@ -16,7 +16,7 @@ def all_notes(request):
         'all_notes' : all_notes
     }
 
-    return render(request, 'all_notes.html', context)
+    return render(request, 'notes.html', context)
 
 ## show one note
 def detail(request, slug):
@@ -24,7 +24,7 @@ def detail(request, slug):
     context = {
     'note' : note
     }
-    return render(request, 'note_detail.html' , context)
+    return render(request, 'one_note.html' , context)
 
 ## add note
 def note_add(request):
